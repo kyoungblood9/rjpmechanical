@@ -1,0 +1,750 @@
+---
+const { title = "RJP Mechanical LLC" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <title>{title}</title>
+
+    <meta
+      name="description"
+      content="RJP Mechanical LLC - Commercial HVAC design and consulting services."
+    />
+
+    <style is:global>
+
+      :root {
+        --text: #111;
+        --muted: #5a5a5a;
+        --bg: #ffffff;
+        --light: #f4f6f8;
+        --border: #e5e7eb;
+        --accent: #b4232c;
+        --dark: #0f2742;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+        color: var(--text);
+        background: var(--bg);
+        line-height: 1.7;
+      }
+
+      h1,
+      h2,
+      h3 {
+        letter-spacing: -0.5px;
+        margin-top: 0;
+      }
+
+      p {
+        margin-top: 0;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      img {
+        max-width: 100%;
+      }
+
+      /* LAYOUT */
+
+      .container {
+        max-width: 1200px;
+        margin: auto;
+        padding: 0 24px;
+      }
+
+      .section {
+        padding: 100px 0;
+      }
+
+      /* NAV */
+
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background: rgba(255,255,255,0.96);
+        backdrop-filter: blur(8px);
+        border-bottom: 1px solid var(--border);
+      }
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: #0f2742;
+}
+
+.logo {
+  height: 94px;
+  width: auto;
+  display: block;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.brand-main {
+  font-size: 34px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.brand-sub {
+  margin-top: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #b4232c;
+}
+
+.logo {
+  height: 82px;
+  width: auto;
+  display: block;
+}
+
+      nav {
+        display: flex;
+        align-items: center;
+      }
+
+nav a {
+  margin-left: 32px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #1f2937;
+  position: relative;
+  transition: all 0.25s ease;
+}
+
+      nav a:hover {
+  color: #b4232c;
+}
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 0;
+  height: 2px;
+  background: #b4232c;
+  transition: width 0.25s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+.nav-contact-btn {
+  border: 2px solid #0f2742;
+  padding: 10px 18px;
+  margin-left: 32px;
+  color: #0f2742;
+  transition: all 0.25s ease;
+}
+
+.nav-contact-btn:hover {
+  background: #0f2742;
+  color: white !important;
+}
+
+.nav-contact-btn::after {
+  display: none;
+}
+
+.nav-contact-btn:hover::after {
+  display: none;
+}
+      /* BUTTONS */
+
+.btn,
+.btn-outline,
+.btn-outline-light {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 22px;
+  min-height: 40px;
+  border-radius: 0;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  line-height: 1;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+      /* RED BUTTON */
+
+   .btn {
+  background: #b4232c;
+  color: white;
+  border: 2px solid #b4232c;
+  box-shadow: 0 4px 14px rgba(230, 57, 70, 0.18);
+}
+
+.btn:hover {
+  background: #cf2f3c;
+  border-color: #cf2f3c;
+  transform: translateY(-1px);
+}
+
+      /* WHITE OUTLINE BUTTON */
+
+      .btn-outline-light {
+  background: transparent;
+  color: white;
+  border: 2px solid rgba(255,255,255,0.85);
+}
+
+.btn-outline-light:hover {
+  background: white;
+  color: #0f2742;
+  transform: translateY(-1px);
+}
+
+      /* DARK OUTLINE BUTTON */
+
+      .btn-outline {
+        background: transparent;
+        color: #111;
+        border: 2px solid #111;
+      }
+
+      .btn-outline:hover {
+        background: #111;
+        color: white;
+      }
+
+/* PREMIUM SERVICE CARDS */
+
+.card {
+  background: white;
+  border: 1px solid #ececec;
+  padding: 26px 18px;
+  transition: all 0.25s ease;
+  text-align: center;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(15, 39, 66, 0.08);
+  border-color: #d9d9d9;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 0;
+  background: #b4232c;
+  transition: height 0.25s ease;
+}
+
+.card:hover::before {
+  height: 100%;
+}
+
+.card h3 {
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.3;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  color: #0f2742;
+  min-height: 42px;
+}
+
+.card p {
+  font-size: 13px;
+  line-height: 1.65;
+  color: #5f5f5f;
+}
+
+.card-icon {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 14px;
+}
+
+.clipboard-icon {
+  width: 78px;
+  height: 78px;
+}
+
+/* EXPERIENCE CARDS */
+
+.experience-card {
+  padding: 0;
+  overflow: hidden;
+}
+
+.experience-image {
+  width: 75%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  transition: transform 0.35s ease;
+}
+
+.experience-card:hover .experience-image {
+  transform: scale(1.04);
+}
+
+.experience-content {
+  padding: 18px;
+}
+
+.experience-content h3 {
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+
+.experience-content p {
+  font-size: 16px;
+  line-height: 1.65;
+}
+      /* FOOTER */
+
+      footer {
+        background: #111827;
+        color: #d1d5db;
+        padding: 80px 0 40px;
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 40px;
+      }
+
+      .footer-title {
+        color: white;
+        margin-bottom: 16px;
+        font-size: 18px;
+      }
+
+      .footer-links a {
+        display: block;
+        margin-bottom: 10px;
+        color: #d1d5db;
+      }
+
+      .footer-bottom {
+        border-top: 1px solid rgba(255,255,255,0.08);
+        margin-top: 50px;
+        padding-top: 24px;
+        font-size: 14px;
+        color: #9ca3af;
+      }
+
+      /* MOBILE */
+
+      @media (max-width: 900px) {
+
+        .nav-wrapper {
+          flex-direction: column;
+          gap: 20px;
+        }
+
+        nav {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
+        nav a {
+          margin: 8px 12px;
+        }
+
+        .footer-grid {
+          grid-template-columns: 1fr;
+        }
+
+      }
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <!-- NAV -->
+
+    <header>
+
+      <div class="container nav-wrapper">
+
+ <a href="/" class="brand">
+
+  <img
+    src="/logo1.png"
+    alt="RJP Mechanical Logo"
+    class="logo"
+  />
+
+  <div class="brand-text">
+
+    <span class="brand-main">
+      RJP Mechanical
+    </span>
+
+    <span class="brand-sub">
+      Design • Consult • Deliver
+    </span>
+
+  </div>
+
+</a>
+
+        <nav>
+          <a href="/">Home</a>
+          <a href="/services">Services</a>
+          <a href="/about">About</a>
+         <a href="/contact" class="nav-contact-btn">
+  Contact
+</a>
+        </nav>
+
+      </div>
+
+    </header>
+
+    <!-- PAGE CONTENT -->
+
+    <main>
+      <slot />
+    </main>
+
+    <!-- FOOTER -->
+
+<footer style="
+  background:#163047;
+  color:white;
+  padding-top:90px;
+">
+
+  <div style="
+    max-width:1800px;
+    margin:0 auto;
+    padding:0 60px;
+  ">
+
+    <!-- TOP -->
+    <div style="
+      display:grid;
+      grid-template-columns:repeat(3, minmax(0, 1fr));
+      width:100%;
+      gap:80px;
+      align-items:start;
+      padding-bottom:60px;
+      border-bottom:1px solid rgba(255,255,255,0.08);
+    ">
+
+      <!-- BRAND -->
+      <div style="
+        width:100%;
+      ">
+
+        <div style="
+          display:flex;
+          align-items:center;
+          gap:18px;
+          margin-bottom:22px;
+        ">
+
+          <img
+            src="/logo3.png"
+            alt="RJP Mechanical Logo"
+            style="
+              width:100px;
+              height:auto;
+              flex-shrink:0;
+            "
+          />
+
+          <div>
+
+            <h3 style="
+              font-size:34px;
+              font-weight:800;
+              letter-spacing:1px;
+              text-transform:uppercase;
+              margin:0;
+              line-height:1;
+            ">
+              RJP Mechanical
+            </h3>
+
+            <p style="
+              margin:8px 0 0 0;
+              color:#b4232c;
+              font-size:13px;
+              letter-spacing:1.5px;
+              text-transform:uppercase;
+            ">
+         
+            </p>
+
+          </div>
+
+        </div>
+
+        <div style="
+          width:70px;
+          height:4px;
+          background:#b4232c;
+          margin-bottom:26px;
+        "></div>
+
+        <p style="
+          color:#b8c0cc;
+          line-height:1.9;
+          max-width:500px;
+          font-size:16px;
+        ">
+          Commercial HVAC design and consulting support for
+          tenant improvements, warehouses, industrial facilities,
+          specialty environments, and existing buildings.
+        </p>
+
+      </div>
+
+      <!-- QUICK LINKS -->
+      <div style="
+        width:100%;
+        border-left:1px solid rgba(255,255,255,0.08);
+        padding-left:40px;
+      ">
+
+        <h3 style="
+          font-size:18px;
+          margin-bottom:28px;
+          text-transform:uppercase;
+          letter-spacing:1px;
+        ">
+          Quick Links
+        </h3>
+
+        <div style="
+          display:flex;
+          flex-direction:column;
+          gap:16px;
+        ">
+
+          <a href="/" style="color:#b8c0cc; text-decoration:none;">
+            Home
+          </a>
+
+          <a href="/services" style="color:#b8c0cc; text-decoration:none;">
+            Services
+          </a>
+
+          <a href="/contact" style="color:#b8c0cc; text-decoration:none;">
+            Contact
+          </a>
+
+        </div>
+
+      </div>
+
+      <!-- CONTACT -->
+      <div style="
+        width:100%;
+        border-left:1px solid rgba(255,255,255,0.08);
+        padding-left:40px;
+      ">
+
+        <h3 style="
+          font-size:18px;
+          margin-bottom:28px;
+          text-transform:uppercase;
+          letter-spacing:1px;
+        ">
+          Contact
+        </h3>
+
+        <div style="
+          display:flex;
+          flex-direction:column;
+          gap:22px;
+          color:#b8c0cc;
+        ">
+
+          <!-- EMAIL -->
+          <div style="
+            display:flex;
+            align-items:center;
+            gap:14px;
+          ">
+
+            <div style="
+              width:42px;
+              height:42px;
+              background:#44576b;
+              border-radius:50%;
+              display:flex;
+              align-items:center;
+              justify-content:center;
+              flex-shrink:0;
+            ">
+
+              <img
+                src="/icons/mail-icon.png"
+                alt="Email Icon"
+                style="
+                  width:18px;
+                  height:18px;
+                "
+              />
+
+            </div>
+
+            <a
+              href="mailto:info@rjpmech.com"
+              style="
+                color:#b8c0cc;
+                text-decoration:none;
+              "
+            >
+              info@rjpmech.com
+            </a>
+
+          </div>
+
+          <!-- PHONE -->
+          <div style="
+            display:flex;
+            align-items:center;
+            gap:14px;
+          ">
+
+            <div style="
+              width:42px;
+              height:42px;
+              background:#44576b;
+              border-radius:50%;
+              display:flex;
+              align-items:center;
+              justify-content:center;
+              flex-shrink:0;
+            ">
+
+              <img
+                src="/icons/phone-icon.png"
+                alt="Phone Icon"
+                style="
+                  width:18px;
+                  height:18px;
+                "
+              />
+
+            </div>
+
+            <p style="margin:0;">
+              540-974-0087
+            </p>
+
+          </div>
+
+          <!-- LOCATION -->
+          <div style="
+            display:flex;
+            align-items:center;
+            gap:14px;
+          ">
+
+            <div style="
+              width:42px;
+              height:42px;
+              background:#44576b;
+              border-radius:50%;
+              display:flex;
+              align-items:center;
+              justify-content:center;
+              flex-shrink:0;
+            ">
+
+              <img
+                src="/icons/location-icon.png"
+                alt="Location Icon"
+                style="
+                  width:18px;
+                  height:18px;
+                "
+              />
+
+            </div>
+
+            <p style="margin:0;">
+              Winchester, VA
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- BOTTOM -->
+    <div style="
+      padding:28px 0;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      flex-wrap:wrap;
+      gap:20px;
+      color:#7f8b99;
+      font-size:14px;
+    ">
+
+      <div>
+        © 2026 RJP Mechanical LLC. All rights reserved.
+      </div>
+
+      <div>
+        Commercial HVAC Design & Consulting
+      </div>
+
+    </div>
+
+  </div>
+
+</footer>

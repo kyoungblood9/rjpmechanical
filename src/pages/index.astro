@@ -1,0 +1,677 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="RJP Mechanical LLC">
+
+  <!-- HERO -->
+  <section style="
+    position: relative;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    padding: 0 80px;
+    color: white;
+    background: url('/hero.jpg') center/cover no-repeat;
+  ">
+
+    <!-- OVERLAY -->
+    <div style="
+      position:absolute;
+      inset:0;
+      background: linear-gradient(
+        90deg,
+        rgba(10,25,45,0.92) 0%,
+        rgba(10,25,45,0.78) 50%,
+        rgba(10,25,45,0.35) 100%
+      );
+    "></div>
+
+    <!-- HERO CONTENT -->
+    <div style="
+      position:relative;
+      max-width:750px;
+      z-index:2;
+    ">
+
+      <h1 style="
+        font-size:64px;
+        line-height:1.05;
+        letter-spacing:-2px;
+        margin-bottom:20px;
+      ">
+        COMMERCIAL HVAC DESIGN & CONSULTING
+      </h1>
+
+      <div style="
+        width:80px;
+        height:4px;
+        background:#b4232c;
+        margin-bottom:30px;
+      "></div>
+
+      <p style="
+        font-size:18px;
+        color:#d7d7d7;
+        max-width:650px;
+        line-height:1.7;
+        margin-bottom:40px;
+      ">
+        Providing practical mechanical design solutions and consulting services for commercial buildings, tenant improvements, warehouses, industrial facilities, cold storage, and specialty pressure-controlled environments.
+      </p>
+
+      <!-- BUTTONS -->
+      <div style="
+        display:flex;
+        gap:16px;
+        flex-wrap:wrap;
+      ">
+
+        <a href="/services" class="btn">
+          Our Services
+        </a>
+
+        <a href="/contact" class="btn-outline-light">
+          Contact Us
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- SERVICES -->
+  <section
+  class="section container"
+  style="
+    text-align:center;
+    padding-top:120px;
+    padding-bottom:120px;
+  "
+>
+
+    <h2 style="
+      font-size:42px;
+      margin-bottom:10px;
+      letter-spacing:-1px;
+    ">
+      Solutions Built For Your Project
+    </h2>
+
+    <div style="
+      width:80px;
+      height:4px;
+      background:#b4232c;
+      margin:20px auto 40px auto;
+    "></div>
+
+    <p style="
+      color:#555;
+      max-width:850px;
+      margin:0 auto 60px auto;
+    ">
+    </p>
+
+    <div style="
+      display:grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap:14px;
+    ">
+
+<div class="card">
+
+  <img
+    src="/icons/blueprint-icon.png"
+    alt="Mechanical Design Icon"
+    class="card-icon"
+  />
+
+  <h3>
+    Mechanical Design
+  </h3>
+
+  <p>
+    Permit-ready HVAC drawings and coordination support.
+  </p>
+
+</div>
+
+      <div class="card">
+
+  <img
+    src="/icons/calculator-icon.png"
+    alt="Load Calculations Icon"
+    class="card-icon"
+  />
+
+  <h3>
+    Load Calculations
+  </h3>
+
+  <p>
+    Commercial heating, cooling, and ventilation calculations.
+  </p>
+
+</div>
+
+<div class="card">
+
+  <img
+    src="/icons/fan-icon.png"
+    alt="Tenant Fit-Outs Icon"
+    class="card-icon"
+  />
+
+  <h3>
+    Tenant Fit-Outs
+  </h3>
+
+  <p>
+    HVAC layouts and system coordination for commercial tenant build-outs.
+  </p>
+
+</div>
+
+<div class="card">
+
+<img
+  src="/icons/clipboard-icon.png"
+  alt="Existing Systems Icon"
+  class="card-icon clipboard-icon"
+/>
+
+  <h3>
+    System Evaluations
+  </h3>
+
+  <p>
+    Evaluations and assessments of current HVAC systems for upgrades, renovations, and replacement planning.
+  </p>
+
+</div>
+
+<div class="card">
+
+  <img
+    src="/icons/airfilter-icon.png"
+    alt="Specialty Rooms Icon"
+    class="card-icon"
+  />
+
+  <h3>
+    Specialty Rooms
+  </h3>
+
+  <p>
+    Cold storage, pressure-controlled environments, and specialty HVAC applications.
+  </p>
+
+</div>
+
+<div class="card">
+
+  <img
+    src="/icons/unit-icon.png"
+    alt="HVAC Equipment Icon"
+    class="card-icon"
+  />
+
+  <h3>
+    RTU & Equipment Design
+  </h3>
+
+  <p>
+    Rooftop unit layouts, equipment selection, and coordination.
+  </p>
+
+</div>
+
+    </div>
+
+    <div style="
+      margin-top:50px;
+      text-align:center;
+    ">
+
+<a
+  href="/services"
+  style="
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:12px 22px;
+    margin-top:10px;
+    border:1px solid rgba(15,39,66,0.14);
+    background:rgba(255,255,255,0.7);
+    color:#081626;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    text-decoration:none;
+    transition:all 0.25s ease;
+  "
+  onmouseover="
+    this.style.background='#081626';
+    this.style.color='white';
+    this.style.borderColor='#081626';
+  "
+  onmouseout="
+    this.style.background='rgba(255,255,255,0.7)';
+    this.style.color='#081626';
+    this.style.borderColor='rgba(15,39,66,0.14)';
+  "
+>
+  View Services
+</a>
+
+    </div>
+
+  </section>
+
+<!-- PRACTICAL SOLUTIONS SECTION -->
+<section style="
+  background:#0f2742;
+  color:white;
+  overflow:hidden;
+">
+
+  <div style="
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    align-items:center;
+  ">
+
+    <!-- IMAGE SIDE -->
+    <div>
+      <img
+        src="/blueprint-section.jpg"
+        alt="Mechanical Design Planning"
+        style="
+          width:100%;
+          height:520px;
+          object-fit:cover;
+          display:block;
+        "
+      />
+    </div>
+
+    <!-- TEXT SIDE -->
+    <div style="
+      padding:60px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      position:relative;
+    ">
+
+      <!-- BACKGROUND LOGO -->
+<img
+  src="/blacklogo.png"
+  alt="RJP Logo"
+  style="
+    position:absolute;
+    right:50%;
+    top:50%;
+    transform:translate(50%, -50%);
+    width:680px;
+    opacity:0.70;
+    pointer-events:none;
+    z-index:1;
+    filter:
+      brightness(0)
+      saturate(100%)
+      invert(18%)
+      sepia(61%)
+      saturate(2460%)
+      hue-rotate(336deg)
+      brightness(91%)
+      contrast(91%);
+  "
+/>
+
+      <h2 style="
+        font-size:46px;
+        line-height:1.1;
+        margin-bottom:18px;
+        letter-spacing:-1px;
+        position:relative;
+        z-index:2;
+      ">
+        Practical Solutions.<br />
+        Real-World Experience.
+      </h2>
+
+      <div style="
+        width:70px;
+        height:4px;
+        background:white;
+        margin-bottom:24px;
+        position:relative;
+        z-index:2;
+      "></div>
+
+      <p style="
+        color:#d7d7d7;
+        font-size:17px;
+        line-height:1.75;
+        margin-bottom:20px;
+        position:relative;
+        z-index:2;
+      ">
+        RJP Mechanical provides commercial HVAC design and consulting services focused on constructability, coordination, and clear documentation.
+      </p>
+
+      <p style="
+        color:#d7d7d7;
+        font-size:17px;
+        line-height:1.75;
+        position:relative;
+        z-index:2;
+      ">
+        From permit sets and tenant improvements to existing system evaluations, we help bring projects from concept to completion with practical, buildable mechanical solutions.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- EXPERIENCE -->
+<section
+  class="section container"
+  style="
+    text-align:center;
+    padding-top:110px;
+    padding-bottom:110px;
+  "
+>
+
+  <h2 style="
+    font-size:42px;
+    margin-bottom:10px;
+    letter-spacing:-1px;
+  ">
+    Services
+  </h2>
+
+  <div style="
+    width:80px;
+    height:4px;
+    background:#b4232c;
+    margin:20px auto 40px auto;
+  "></div>
+
+  <p style="
+    color:#5f5f5f;
+    max-width:760px;
+    margin:0 auto 70px auto;
+    line-height:1.8;
+    font-size:16px;
+  ">
+    Experience supporting commercial HVAC projects across a wide range
+    of building types, operational requirements, and specialty environments.
+  </p>
+
+  <div style="
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:26px;
+  ">
+
+    <!-- WAREHOUSE -->
+    <div class="card experience-card">
+
+      <img
+        src="/experience/warehouse.jpg"
+        alt="Warehouses & Distribution"
+        class="experience-image"
+      />
+
+      <div class="experience-content">
+
+        <h3>Warehouses & Distribution</h3>
+
+        <p>
+          HVAC support for logistics facilities, storage buildings,
+          and large open commercial spaces.
+        </p>
+
+      </div>
+
+    </div>
+
+    <!-- OFFICE -->
+    <div class="card experience-card">
+
+      <img
+        src="/experience/office.jpg"
+        alt="Office Build-Outs"
+        class="experience-image"
+      />
+
+      <div class="experience-content">
+
+        <h3>Office Build-Outs</h3>
+
+        <p>
+          Efficient HVAC systems designed for comfort,
+          productivity, and tenant flexibility.
+        </p>
+
+      </div>
+
+    </div>
+
+    <!-- RETAIL -->
+    <div class="card experience-card">
+
+      <img
+        src="/experience/retail.jpg"
+        alt="Retail & Restaurants"
+        class="experience-image"
+      />
+
+      <div class="experience-content">
+
+        <h3>Retail & Restaurants</h3>
+
+        <p>
+          Ventilation and comfort solutions for customer-facing
+          commercial environments.
+        </p>
+
+      </div>
+
+    </div>
+
+    <!-- MEDICAL -->
+    <div class="card experience-card">
+
+      <img
+        src="/experience/medical.jpg"
+        alt="Medical Facilities"
+        class="experience-image"
+      />
+
+      <div class="experience-content">
+
+        <h3>Medical Facilities</h3>
+
+        <p>
+          Pressure relationships, filtration requirements,
+          and controlled environment support.
+        </p>
+
+      </div>
+
+    </div>
+
+    <!-- INDUSTRIAL -->
+    <div class="card experience-card">
+
+      <img
+        src="/experience/industrial.jpg"
+        alt="Industrial Facilities"
+        class="experience-image"
+      />
+
+      <div class="experience-content">
+
+        <h3>Industrial Facilities</h3>
+
+        <p>
+          Mechanical systems built around process loads,
+          ventilation demands, and operational efficiency.
+        </p>
+
+      </div>
+
+    </div>
+
+    <!-- COLD STORAGE -->
+    <div class="card experience-card">
+
+      <img
+        src="/experience/cold-storage.jpg"
+        alt="Cold Storage"
+        class="experience-image"
+      />
+
+      <div class="experience-content">
+
+        <h3>Cold Storage</h3>
+
+        <p>
+          Specialty cooling and temperature-controlled
+          HVAC applications.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+<div style="
+  margin-top:60px;
+  text-align:center;
+">
+
+<a
+  href="/services"
+  style="
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:12px 22px;
+    margin-top:10px;
+    border:1px solid rgba(15,39,66,0.14);
+    background:rgba(255,255,255,0.7);
+    color:#081626;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    text-decoration:none;
+    transition:all 0.25s ease;
+  "
+  onmouseover="
+    this.style.background='#081626';
+    this.style.color='white';
+    this.style.borderColor='#081626';
+  "
+  onmouseout="
+    this.style.background='rgba(255,255,255,0.7)';
+    this.style.color='#081626';
+    this.style.borderColor='rgba(15,39,66,0.14)';
+  "
+>
+  View Services
+</a>
+
+</div>
+</section>
+ <!-- CTA -->
+<section style="
+  background:#0f2742;
+  background-image:url('/blueprint-texture.png');
+  background-size:cover;
+  background-position:center;
+  color:white;
+  padding:90px 20px;
+  position:relative;
+  overflow:hidden;
+">
+
+  <!-- DARK OVERLAY -->
+  <div style="
+    position:absolute;
+    inset:0;
+    background:rgba(8,22,38,0.30);
+  "></div>
+
+  <div
+    class="container"
+    style="
+      position:relative;
+      z-index:2;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      flex-wrap:wrap;
+      gap:30px;
+    "
+  >
+
+    <!-- TEXT -->
+    <div>
+
+      <h2 style="
+        font-size:44px;
+        margin-bottom:14px;
+        letter-spacing:-1px;
+        line-height:1.1;
+      ">
+        Let’s Build Something Great Together
+      </h2>
+
+      <div style="
+        width:70px;
+        height:4px;
+        background:#b4232c;
+        margin-bottom:22px;
+      "></div>
+
+      <p style="
+        color:#d7d7d7;
+        font-size:17px;
+        line-height:1.8;
+        max-width:650px;
+      ">
+        Commercial HVAC consulting focused on practical,
+        buildable mechanical solutions for real-world projects.
+      </p>
+
+    </div>
+
+    <!-- BUTTON -->
+    <div>
+
+      <a
+        href="/contact"
+        class="btn"
+        style="
+          background:#b4232c;
+          border:none;
+        "
+      >
+        Contact Us
+      </a>
+
+    </div>
+
+  </div>
+
+</section>

@@ -1,0 +1,451 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+
+  <!-- HERO -->
+  <section style="
+    position:relative;
+    padding:90px 20px 80px;
+    color:white;
+    overflow:hidden;
+    background:
+      linear-gradient(
+        90deg,
+        rgba(10,25,45,0.92) 0%,
+        rgba(10,25,45,0.78) 50%,
+        rgba(10,25,45,0.40) 100%
+      ),
+      url('/images/hardhat-blueprint.jpg') center/cover no-repeat;
+  ">
+
+    <!-- BACKGROUND LOGO -->
+    <img
+      src="/blacklogo.png"
+      alt="RJP Logo"
+      style="
+        position:absolute;
+        right:40px;
+        top:50%;
+        transform:translateY(-50%);
+        width:520px;
+        opacity:0.30;
+        pointer-events:none;
+        z-index:1;
+        filter:
+          brightness(0)
+          saturate(100%)
+          invert(18%)
+          sepia(61%)
+          saturate(2460%)
+          hue-rotate(336deg)
+          brightness(91%)
+          contrast(91%);
+      "
+    />
+
+    <div style="
+      max-width:1200px;
+      margin:auto;
+      position:relative;
+      z-index:2;
+    ">
+
+      <div style="
+        max-width:720px;
+      ">
+
+        <h1 style="
+          font-size:56px;
+          line-height:1.05;
+          letter-spacing:-2px;
+          margin-bottom:14px;
+        ">
+          Contact RJP Mechanical
+        </h1>
+
+        <div style="
+          width:80px;
+          height:4px;
+          background:#b4232c;
+          margin-bottom:22px;
+        "></div>
+
+        <p style="
+          font-size:18px;
+          color:#d7d7d7;
+          max-width:650px;
+          line-height:1.75;
+        ">
+          Send the project location, scope,
+          plans, timeline, and any existing HVAC
+          information available for review.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+  <!-- CONTACT SECTION -->
+  <section style="
+    padding:110px 20px;
+    background:white;
+  ">
+
+    <div style="
+      max-width:1200px;
+      margin:auto;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:40px;
+      align-items:start;
+    ">
+
+      <!-- LEFT -->
+      <div>
+
+        <h2 style="
+          font-size:42px;
+          margin-bottom:10px;
+          letter-spacing:-1px;
+          color:#081626;
+        ">
+          Include With Your Request
+        </h2>
+
+        <div style="
+          width:70px;
+          height:4px;
+          background:#b4232c;
+          margin-bottom:36px;
+        "></div>
+
+        <div style="
+          display:flex;
+          flex-direction:column;
+          gap:18px;
+        ">
+
+          <!-- ITEM -->
+          <div class="contact-card">
+
+            <img
+              src="/icons/location-icon.png"
+              alt="Project Address"
+              class="contact-icon"
+            />
+
+            <div>
+
+              <h3>Project Address</h3>
+
+              <p>
+                Jobsite location and jurisdiction information.
+              </p>
+
+            </div>
+
+          </div>
+
+          <!-- ITEM -->
+          <div class="contact-card">
+
+            <img
+              src="/icons/building-icon.png"
+              alt="Building Information"
+              class="contact-icon"
+            />
+
+            <div>
+
+              <h3>Building Type & Square Footage</h3>
+
+              <p>
+                Building type, occupancy,
+                and approximate square footage.
+              </p>
+
+            </div>
+
+          </div>
+
+          <!-- ITEM -->
+          <div class="contact-card">
+
+            <img
+              src="/icons/blueprint-icon.png"
+              alt="Existing Drawings"
+              class="contact-icon"
+            />
+
+            <div>
+
+              <h3>Existing Drawings or Floor Plans</h3>
+
+              <p>
+                Existing PDFs, field sketches,
+                or construction documents if available.
+              </p>
+
+            </div>
+
+          </div>
+
+          <!-- ITEM -->
+          <div class="contact-card">
+
+            <img
+              src="/icons/unit-icon.png"
+              alt="HVAC Equipment"
+              class="contact-icon"
+            />
+
+            <div>
+
+              <h3>Current HVAC Equipment</h3>
+
+              <p>
+                Existing unit information,
+                tonnage, or equipment photos.
+              </p>
+
+            </div>
+
+          </div>
+
+          <!-- ITEM -->
+          <div class="contact-card">
+
+            <img
+              src="/icons/clipboard-icon.png"
+              alt="Project Timeline"
+              class="contact-icon"
+            />
+
+            <div>
+
+              <h3>Bid or Construction Deadline</h3>
+
+              <p>
+                Important project dates,
+                permit schedules, or timelines.
+              </p>
+
+            </div>
+
+          </div>
+
+          <!-- ITEM -->
+          <div class="contact-card">
+
+            <img
+              src="/icons/airfilter-icon.png"
+              alt="Specialty Rooms"
+              class="contact-icon"
+            />
+
+            <div>
+
+              <h3>Specialty Room Requirements</h3>
+
+              <p>
+                Pressure rooms, cold storage,
+                or specialty ventilation requirements.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- RIGHT -->
+      <div style="
+        background:#0f2742;
+        color:white;
+        padding:50px;
+        position:relative;
+        overflow:hidden;
+      ">
+
+        <!-- BACKGROUND LOGO -->
+        <img
+          src="/blacklogo.png"
+          alt="RJP Logo"
+          style="
+            position:absolute;
+            right:-120px;
+            top:50%;
+            transform:translateY(-50%);
+            width:520px;
+            opacity:0.06;
+            pointer-events:none;
+          "
+        />
+
+        <div style="position:relative; z-index:2;">
+
+          <h2 style="
+            font-size:42px;
+            margin-bottom:10px;
+            letter-spacing:-1px;
+            line-height:1.1;
+          ">
+            RJP Mechanical LLC
+          </h2>
+
+          <div style="
+            width:70px;
+            height:4px;
+            background:#b4232c;
+            margin-bottom:36px;
+          "></div>
+
+          <div style="
+            display:flex;
+            flex-direction:column;
+            gap:28px;
+          ">
+
+            <div>
+
+              <div class="contact-label">
+                Website
+              </div>
+
+              <div class="contact-info">
+                www.rjpmech.com
+              </div>
+
+            </div>
+
+            <div>
+
+              <div class="contact-label">
+                Email
+              </div>
+
+              <div class="contact-info">
+                info@rjpmech.com
+              </div>
+
+            </div>
+
+            <div>
+
+              <div class="contact-label">
+                Phone
+              </div>
+
+              <div class="contact-info">
+                (540) 974-0087
+              </div>
+
+            </div>
+
+            <div>
+
+              <div class="contact-label">
+                Service Area
+              </div>
+
+              <div class="contact-info">
+                Winchester, VA Region<br />
+                Serving VA, WV, MD & DC
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- CTA -->
+          <div style="
+            margin-top:50px;
+          ">
+
+            <a
+              href="mailto:info@rjpmech.com"
+              class="btn"
+            >
+              Send Project Information
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <style>
+
+.contact-card{
+  display:flex;
+  gap:14px;
+  align-items:flex-start;
+  padding:18px;
+  border:2px solid #d6dde6;
+  background:white;
+}
+
+    .contact-card h3{
+      font-size:18px;
+      margin-bottom:8px;
+      color:#081626;
+      line-height:1.3;
+    }
+
+.contact-card p{
+  color:#5b6573;
+  line-height:1.6;
+  font-size:14px;
+}
+
+    .contact-icon{
+      width:42px;
+      height:42px;
+      object-fit:contain;
+      flex-shrink:0;
+    }
+
+    .contact-label{
+      color:#b4232c;
+      font-size:13px;
+      letter-spacing:2px;
+      text-transform:uppercase;
+      font-weight:700;
+      margin-bottom:6px;
+    }
+
+    .contact-info{
+      color:white;
+      font-size:18px;
+      line-height:1.7;
+    }
+
+    @media(max-width:900px){
+
+      section div[style*="grid-template-columns:1fr 1fr"]{
+        grid-template-columns:1fr !important;
+      }
+
+      h1{
+        font-size:48px !important;
+      }
+
+      h2{
+        font-size:34px !important;
+      }
+
+    }
+
+  </style>
+
+</Layout>
