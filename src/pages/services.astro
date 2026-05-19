@@ -535,35 +535,43 @@ font-size:12px;
 
   <style>
 
-    @media(max-width:1000px){
+@media(max-width:1000px){
 
-      div[style*="grid-template-columns:repeat(3, 1fr)"],
-      div[style*="grid-template-columns:repeat(3,1fr)"]{
-        grid-template-columns:1fr !important;
-      }
+  div[style*="grid-template-columns:repeat(4, 1fr)"],
+  div[style*="grid-template-columns:repeat(4,1fr)"],
+  div[style*="grid-template-columns:repeat(3, 1fr)"],
+  div[style*="grid-template-columns:repeat(3,1fr)"],
+  div[style*="grid-template-columns:repeat(2, 1fr)"],
+  div[style*="grid-template-columns:repeat(2,1fr)"]{
+    grid-template-columns:1fr !important;
+  }
 
-      div[style*="grid-template-columns:repeat(2, 1fr)"]{
-        grid-template-columns:1fr !important;
-      }
+}
 
-    }
+@media(max-width:768px){
 
-    @media(max-width:768px){
+  h1{
+    font-size:44px !important;
+    line-height:1.1 !important;
+  }
 
-      h1{
-        font-size:44px !important;
-      }
+  h2{
+    font-size:36px !important;
+    line-height:1.15 !important;
+    word-break:normal !important;
+    overflow-wrap:normal !important;
+  }
 
-      h2{
-        font-size:36px !important;
-      }
+  section{
+    padding-left:20px !important;
+    padding-right:20px !important;
+  }
 
-      section{
-        padding-left:20px !important;
-        padding-right:20px !important;
-      }
+  div[style*="padding:120px 110px"]{
+    padding:60px 28px !important;
+  }
 
-    }
+}
 
   </style>
 
