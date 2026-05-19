@@ -443,27 +443,31 @@ Our approach emphasizes practical engineering, implementable solutions, energy e
 
 }
 
-    @media(max-width:900px){
+@media(max-width:900px){
 
-      h1{
-        font-size:48px !important;
-      }
+  h1{
+    font-size:48px !important;
+  }
 
-      h2{
-        font-size:36px !important;
-      }
+  h2{
+    font-size:36px !important;
+  }
 
-      div[style*="grid-template-columns: repeat(3, 1fr)"]{
-        grid-template-columns:1fr !important;
-      }
+  div[style*="grid-template-columns: repeat(3, 1fr)"]{
+    grid-template-columns:1fr !important;
+  }
 
-      section{
-        padding-left:20px !important;
-        padding-right:20px !important;
-      }
+  div[style*="grid-template-columns: repeat(2, 1fr)"],
+  div[style*="grid-template-columns:repeat(2,1fr)"]{
+    grid-template-columns:1fr !important;
+  }
 
-    }
+  section{
+    padding-left:20px !important;
+    padding-right:20px !important;
+  }
 
-  </style>
+}
 
+</style>
 </Layout>
