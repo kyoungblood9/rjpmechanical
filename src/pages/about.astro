@@ -429,17 +429,19 @@ Our approach emphasizes practical engineering, implementable solutions, energy e
       margin:0;
     }
 
-    @media(max-width:1000px){
+@media(max-width:1000px){
 
-      section[style*="grid-template-columns: 1fr 1fr"]{
-        display:block !important;
-      }
+  div[style*="grid-template-columns: 1fr 1fr"]{
+    display:block !important;
+  }
 
-      section[style*="grid-template-columns: 1fr 1fr"] img{
-        height:420px !important;
-      }
+  div[style*="grid-template-columns: 1fr 1fr"] img{
+    height:auto !important;
+    width:100% !important;
+    object-fit:cover !important;
+  }
 
-    }
+}
 
     @media(max-width:900px){
 
