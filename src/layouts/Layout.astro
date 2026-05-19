@@ -505,12 +505,26 @@ nav a {
 
 /* ALL GRID LAYOUTS */
 
-div[style*="repeat(6, 1fr)"],
-div[style*="repeat(4, 1fr)"],
-div[style*="repeat(3, 1fr)"] {
-  display: grid !important;
+.split-grid,
+.cards-3,
+.cards-6 {
   grid-template-columns: 1fr !important;
-  width: 100% !important;
+  gap: 20px !important;
+}
+
+.card {
+  padding: 40px 24px !important;
+}
+
+.card h3 {
+  min-height: auto !important;
+  font-size: 34px !important;
+  line-height: 1.1 !important;
+}
+
+.card p {
+  font-size: 18px !important;
+  line-height: 1.6 !important;
 }
 
 /* BLUE SECTION */
