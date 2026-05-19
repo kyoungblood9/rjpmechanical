@@ -6,7 +6,7 @@ const { title = "RJP Mechanical LLC" } = Astro.props;
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
     <title>{title}</title>
@@ -62,26 +62,46 @@ const { title = "RJP Mechanical LLC" } = Astro.props;
 
       /* LAYOUT */
 
-      .container {
-        max-width: 1200px;
-        margin: auto;
-        padding: 0 24px;
-      }
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
 
       .section {
         padding: 100px 0;
       }
 
+/* REUSABLE GRIDS */
+
+.split-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+}
+
+.cards-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+
+.cards-6 {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 14px;
+}
       /* NAV */
 
-      header {
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-        background: rgba(255,255,255,0.96);
-        backdrop-filter: blur(8px);
-        border-bottom: 1px solid var(--border);
-      }
+header {
+  position: relative;
+  z-index: 1000;
+  background: rgba(255,255,255,0.96);
+  border-bottom: 1px solid var(--border);
+}
 
 .nav-wrapper {
   display: flex;
@@ -315,11 +335,10 @@ nav a:hover::after {
 }
 
 .experience-image {
-  width: 75%;
+  width: 100%;
   height: 180px;
   object-fit: cover;
   display: block;
-  margin: 0 auto;
   transition: transform 0.35s ease;
 }
 
@@ -374,30 +393,177 @@ nav a:hover::after {
         color: #9ca3af;
       }
 
-      /* MOBILE */
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
 
-      @media (max-width: 900px) {
+@media screen and (max-width: 768px) {
 
-        .nav-wrapper {
-          flex-direction: column;
-          gap: 20px;
-        }
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
 
-        nav {
-          flex-wrap: wrap;
-          justify-content: center;
-        }
+  * {
+    box-sizing: border-box;
+  }
 
-        nav a {
-          margin: 8px 12px;
-        }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
 
-        .footer-grid {
-          grid-template-columns: 1fr;
-        }
+  /* CONTAINER */
 
-      }
+  .container {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0 auto;
+  }
 
+/* NAV */
+
+.nav-wrapper {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.brand {
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.logo {
+  height: 72px;
+}
+
+.brand-main {
+  font-size: 22px;
+  line-height: 1;
+}
+
+.brand-sub {
+  font-size: 9px;
+  letter-spacing: 1.5px;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 12px;
+}
+
+nav a {
+  margin: 0;
+}
+
+.nav-contact-btn {
+  margin-left: 0;
+}
+
+  /* TEXT */
+
+  h1 {
+    font-size: 42px !important;
+    line-height: 1.1 !important;
+  }
+
+  h2 {
+    font-size: 32px !important;
+    line-height: 1.2 !important;
+  }
+
+  h3 {
+    font-size: 22px !important;
+  }
+
+  p {
+    font-size: 16px !important;
+    line-height: 1.7 !important;
+  }
+
+  /* HERO */
+
+  section[style*="height: 85vh"] {
+    padding: 40px 20px !important;
+    height: auto !important;
+    min-height: auto !important;
+  }
+
+/* ALL GRID LAYOUTS */
+
+div[style*="repeat(6, 1fr)"],
+div[style*="repeat(4, 1fr)"],
+div[style*="repeat(3, 1fr)"] {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  width: 100% !important;
+}
+
+/* BLUE SECTION */
+
+  div[style*="padding:60px"] {
+    padding: 40px 20px !important;
+  }
+
+  /* EXPERIENCE IMAGES */
+
+  .experience-image {
+    width: 100% !important;
+    height: 220px !important;
+  }
+
+  /* BACKGROUND LOGO */
+
+  img[src="/blacklogo.png"] {
+    width: 220px !important;
+    opacity: 0.12 !important;
+  }
+
+  /* FOOTER */
+
+  footer div[style*="grid-template-columns:repeat(3"] {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+  }
+
+  footer div[style*="padding-left:40px"] {
+    padding-left: 0 !important;
+    border-left: none !important;
+  }
+
+  footer div[style*="padding:0 60px"] {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  footer div[style*="justify-content:space-between"] {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+
+  /* BUTTONS */
+
+.btn,
+.btn-outline,
+.btn-outline-light {
+  justify-content: center;
+}
+
+}
     </style>
 
   </head>

@@ -10,7 +10,7 @@ import Layout from "../layouts/Layout.astro";
     height: 85vh;
     display: flex;
     align-items: center;
-    padding: 0 80px;
+    padding: clamp(20px, 5vw, 80px);
     color: white;
     background: url('/hero.jpg') center/cover no-repeat;
   ">
@@ -57,7 +57,7 @@ import Layout from "../layouts/Layout.astro";
         line-height:1.7;
         margin-bottom:40px;
       ">
-        Providing practical mechanical design solutions and consulting services for commercial buildings, tenant improvements, warehouses, industrial facilities, cold storage, and specialty pressure-controlled environments.
+        Providing practical mechanical design solutions, commissioning, and consulting services for commercial buildings, industrial facilities, and special projects. 
       </p>
 
       <!-- BUTTONS -->
@@ -113,11 +113,7 @@ import Layout from "../layouts/Layout.astro";
     ">
     </p>
 
-    <div style="
-      display:grid;
-      grid-template-columns: repeat(6, 1fr);
-      gap:14px;
-    ">
+<div class="cards-6">
 
 <div class="card">
 
@@ -150,7 +146,7 @@ import Layout from "../layouts/Layout.astro";
   </h3>
 
   <p>
-    Commercial heating, cooling, and ventilation calculations.
+    Manual N / Manual J, Commercial heating, cooling, and ventilation calculations.
   </p>
 
 </div>
@@ -182,11 +178,11 @@ import Layout from "../layouts/Layout.astro";
 />
 
   <h3>
-    System Evaluations
+    Commissioning & System Evaluations
   </h3>
 
   <p>
-    Evaluations and assessments of current HVAC systems for upgrades, renovations, and replacement planning.
+    Evaluations and assessments of current HVAC systems for upgrades, renovations, and replacement planning, as well as preconstruction design review.
   </p>
 
 </div>
@@ -222,7 +218,7 @@ import Layout from "../layouts/Layout.astro";
   </h3>
 
   <p>
-    Rooftop unit layouts, equipment selection, and coordination.
+    Manual S, Rooftop unit layouts, equipment selection, and coordination.
   </p>
 
 </div>
@@ -274,14 +270,11 @@ import Layout from "../layouts/Layout.astro";
 <section style="
   background:#0f2742;
   color:white;
-  overflow:hidden;
 ">
 
-  <div style="
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    align-items:center;
-  ">
+  <div class="container">
+
+<div class="split-grid">
 
     <!-- IMAGE SIDE -->
     <div>
@@ -315,7 +308,7 @@ import Layout from "../layouts/Layout.astro";
     right:50%;
     top:50%;
     transform:translate(50%, -50%);
-    width:680px;
+    width:min(680px, 80vw);
     opacity:0.70;
     pointer-events:none;
     z-index:1;
@@ -360,7 +353,7 @@ import Layout from "../layouts/Layout.astro";
         position:relative;
         z-index:2;
       ">
-        RJP Mechanical provides commercial HVAC design and consulting services focused on constructability, coordination, and clear documentation.
+        RJP Mechanical provides commercial HVAC design, commissioning, and consulting services focused on constructability, coordination, and clear documentation.
       </p>
 
       <p style="
@@ -374,6 +367,8 @@ import Layout from "../layouts/Layout.astro";
       </p>
 
     </div>
+
+  </div>
 
   </div>
 
@@ -415,11 +410,7 @@ import Layout from "../layouts/Layout.astro";
     of building types, operational requirements, and specialty environments.
   </p>
 
-  <div style="
-    display:grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap:26px;
-  ">
+<div class="cards-3">
 
     <!-- WAREHOUSE -->
     <div class="card experience-card">
