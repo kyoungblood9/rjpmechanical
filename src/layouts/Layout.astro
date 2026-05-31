@@ -392,6 +392,36 @@ nav a:hover::after {
         font-size: 14px;
         color: #9ca3af;
       }
+.footer-social {
+  display:flex;
+  gap:14px;
+  margin-top:24px;
+}
+
+.footer-social-link {
+  width:48px;
+  height:48px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  background:white;
+  border-radius:50%;
+
+  transition:all .25s ease;
+}
+
+.footer-social-link:hover {
+  background:#b4232c;
+  transform:translateY(-3px);
+}
+
+.footer-social-icon {
+  width:34px;
+  height:34px;
+  object-fit:contain;
+}
 
 /* =========================
    MOBILE RESPONSIVE
@@ -723,8 +753,30 @@ nav a {
           tenant improvements, warehouses, industrial facilities,
           specialty environments, and existing buildings.
         </p>
+<div class="footer-social">
 
-      </div>
+  <a
+    href="https://www.linkedin.com/in/rjpmechanical/"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="footer-social-link"
+    aria-label="LinkedIn"
+  >
+    <img src="/icons/linkedinicon.png" alt="LinkedIn" class="footer-social-icon" />
+  </a>
+
+  <a
+    href="https://www.facebook.com/people/RJP-Mech/61556286645218/"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="footer-social-link"
+    aria-label="Facebook"
+  >
+    <img src="/icons/facebookicon.png" alt="Facebook" class="footer-social-icon" />
+  </a>
+
+</div>
+</div>
 
       <!-- QUICK LINKS -->
       <div style="
@@ -748,17 +800,25 @@ nav a {
           gap:16px;
         ">
 
-          <a href="/" style="color:#b8c0cc; text-decoration:none;">
-            Home
-          </a>
+<a href="/" style="color:#b8c0cc; text-decoration:none;">
+  Home
+</a>
 
-          <a href="/services" style="color:#b8c0cc; text-decoration:none;">
-            Services
-          </a>
+<a href="/services" style="color:#b8c0cc; text-decoration:none;">
+  Services
+</a>
 
-          <a href="/contact" style="color:#b8c0cc; text-decoration:none;">
-            Contact
-          </a>
+<a href="/projects" style="color:#b8c0cc; text-decoration:none;">
+  Projects
+</a>
+
+<a href="/about" style="color:#b8c0cc; text-decoration:none;">
+  About
+</a>
+
+<a href="/contact" style="color:#b8c0cc; text-decoration:none;">
+  Contact
+</a>
 
         </div>
 
@@ -893,7 +953,7 @@ nav a {
             </div>
 
             <p style="margin:0;">
-              Winchester, VA
+              Berkeley Springs, WV
             </p>
 
           </div>

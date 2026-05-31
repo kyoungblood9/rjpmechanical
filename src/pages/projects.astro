@@ -589,7 +589,7 @@ import Layout from "../layouts/Layout.astro";
 
 .featured-project-grid {
   display:grid;
-  grid-template-columns:0.7fr 1.3fr;
+  grid-template-columns:1fr 1fr;
   grid-template-areas:
     "content stack"
     "bottom1 bottom2";
@@ -605,18 +605,20 @@ import Layout from "../layouts/Layout.astro";
   grid-area:stack;
   display:flex;
   flex-direction:column;
-  gap:90px;
+  gap:30px;
 }
 
 .featured-bottom-1 {
   grid-area:bottom1;
-  margin-top:50px;
+  margin-top:35px;
 }
-
- 
+.featured-bottom-1 .project-image {
+  max-width:600px;
+}
 
 .featured-bottom-2 {
   grid-area:bottom2;
+  margin-top:30px;
 }
 
 .project-image {
@@ -639,6 +641,13 @@ import Layout from "../layouts/Layout.astro";
 }
 
 @media (max-width:900px) {
+
+  section div[style*="grid-template-columns:1.2fr 0.8fr"],
+  section div[style*="grid-template-columns:0.8fr 1.2fr"] {
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    gap:40px !important;
+  }
 
   .featured-project-grid {
     grid-template-columns:1fr;
